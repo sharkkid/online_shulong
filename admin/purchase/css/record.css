@@ -1,0 +1,7 @@
+@charset "UTF-8";
+/* CSS Document */
+
+
+/* create some css to overwrite bootstrap's default class */
+.remove-all-padding											{padding:0!important;}
+.panel-heading h4											{display:inline-block;}

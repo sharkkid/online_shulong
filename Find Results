@@ -1,0 +1,39 @@
+Searching 385 files for "online_web"
+
+/Applications/XAMPP/xamppfiles/htdocs/online_web/.project:
+    1  <?xml version="1.0" encoding="UTF-8"?>
+    2  <projectDescription>
+    3: 	<name>online_web</name>
+    4  	<comment></comment>
+    5  	<projects>
+
+/Applications/XAMPP/xamppfiles/htdocs/online_web/_setting.php:
+    5  define('DB_USERNAME', "online_web");
+    6  define('DB_PASSWORD', "l8vyqlauA68eVuIy");
+    7: define('DB_DATABASE', "online_web");
+    8  
+    9  define("SYS_DEBUG_MODE", false); // true: test, false: prod
+
+/Applications/XAMPP/xamppfiles/htdocs/online_web/.settings/org.eclipse.php.core.prefs:
+    1  eclipse.preferences.version=1
+    2: include_path=0;/online_web
+    3  
+
+/Applications/XAMPP/xamppfiles/htdocs/online_web/admin/config.php:
+    3  require_once dirname(__FILE__) . './../_setting.php';
+    4  
+    5: if (!isset($_SESSION['user']) || $_SESSION['key'] != md5($_SESSION['user']['jsuser_account'] . get_ip() . 'online_web')){
+    6  	if (!preg_match("/sys_login.php/", $_SERVER['SCRIPT_NAME'])) {
+    7  		$_SESSION['LOGIN_REDIRECT'] = "http://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+    8: 		header("Location: http://{$_SERVER['HTTP_HOST']}/online_web/admin/sys/sys_login.php");
+    9  		exit;
+   10  	}
+
+/Applications/XAMPP/xamppfiles/htdocs/online_web/admin/sys/sys_login.php:
+   53  } else {
+   54  	session_start();
+   55: 	if(isset($_SESSION['user']) && $_SESSION['key'] == md5($_SESSION['user']['jsuser_account'] . get_ip() . 'online_web')){
+   56  		header('Location: '.WT_SERVER.'/admin');
+   57  	} else {
+
+6 matches across 5 files

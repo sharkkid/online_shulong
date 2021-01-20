@@ -1,0 +1,31 @@
+
+header {
+    padding: 20px;
+    text-align: center;
+    font-size: 30px;
+}
+
+span {
+    padding: 15px;
+}
+
+div {
+    padding: 10px;
+}
+
+thead {
+    background-color: lightcoral;
+    font-weight: bold;
+}
+
+tbody {
+    background-color: lightpink;
+}
+
+.sortable {
+    cursor: pointer;
+}
+
+.sortable:hover {
+    background-color: darkred;
+}
