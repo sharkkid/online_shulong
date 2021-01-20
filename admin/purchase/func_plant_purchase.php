@@ -98,6 +98,8 @@ function getCostBySizeWeight($onadd_cur_size,$total_month_list,$AllQuantityBySiz
 				break;	
 		}
 	}
+	if($AllQuantityBySize[$onadd_cur_size] == 0)
+		$AllQuantityBySize[$onadd_cur_size] = 1;
 	return round(($amount_cost*$weight)/$AllQuantityBySize[$onadd_cur_size],2);
 }
 
